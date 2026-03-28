@@ -1,0 +1,148 @@
+.home {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #111, #222);
+  color: white;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #4da3ff;
+}
+
+.hero-subtitle {
+  margin-top: 20px;
+  font-size: 18px;
+  max-width: 500px;
+  opacity: 0.9;
+}
+
+.hero-buttons {
+  margin-top: 35px;
+  display: flex;
+  gap: 20px;
+}
+
+.primary-btn {
+  padding: 14px 28px;
+  background: #4da3ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+  background: #1f7fe0;
+}
+
+.secondary-btn {
+  padding: 14px 28px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.secondary-btn:hover {
+  background: white;
+  color: #111;
+}
+
+/* HERO IMAGE */
+.hero-image-wrapper {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+}
+
+/* SERVICES */
+.services-preview {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.service-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+}
+
+/* CTA */
+.cta {
+  padding: 80px 20px;
+  background: #f5f7fa;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.cta p {
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.cta .primary-btn {
+  margin-top: 25px;
+}

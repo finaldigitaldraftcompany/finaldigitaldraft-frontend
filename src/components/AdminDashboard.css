@@ -1,0 +1,109 @@
+/* --- Base Structure and Dark Theme --- */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background: #0a0a0a; /* Deep dark background */
+    color: white;
+}
+
+/* --- Sidebar Default (Open) State --- */
+.admin-sidebar {
+    width: 260px; /* Base Width */
+    background: #111;
+    padding: 30px;
+    border-right: 1px solid #00eaff;
+    box-shadow: 0 0 15px #00eaff;
+    
+    /* 💥 CRITICAL for collapsing and fixed position */
+    position: fixed; 
+    height: 100%;
+    transition: all 0.3s ease-in-out; /* Smooth transition for collapsing */
+    overflow: hidden; /* Ensures content doesn't spill out while collapsing */
+}
+
+.admin-sidebar h2 {
+    margin-bottom: 20px;
+    color: #00eaff;
+    transition: opacity 0.3s; /* Smoothly fade text */
+}
+
+.admin-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-sidebar li {
+    margin: 15px 0;
+}
+
+.admin-sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s, opacity 0.3s;
+}
+
+.admin-sidebar a:hover {
+    color: #00eaff;
+}
+
+.logout-btn {
+    margin-top: 40px;
+    padding: 10px 20px;
+    background: #00eaff;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    width: 100%;
+    transition: background 0.2s, opacity 0.3s;
+}
+
+.logout-btn:hover {
+    background: #00bcd4;
+}
+
+/* ---------------------------------------------------- */
+/* 💥 COLLAPSED STATE RULES */
+/* ---------------------------------------------------- */
+
+/* 1. Reduce Sidebar Width and Remove Shadow/Border */
+.admin-sidebar.collapsed {
+    width: 0;
+    padding: 0;
+    border-right: none;
+    box-shadow: none;
+}
+
+/* 2. Hide all internal elements smoothly when collapsed */
+.admin-sidebar.collapsed h2,
+.admin-sidebar.collapsed nav,
+.admin-sidebar.collapsed .logout-btn {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* --- Main Content Area --- */
+.admin-main {
+    flex: 1;
+    padding: 60px;
+    /* 💥 CRITICAL: Initial margin-left must account for sidebar width (260px) 
+       plus its left and right padding (30px + 30px = 60px). Total 320px. */
+    margin-left: 320px; 
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* 💥 Shift Main Content when sidebar is collapsed (margin-left becomes just the padding) */
+.admin-sidebar.collapsed + .admin-main {
+    margin-left: 60px; 
+}
+
+/* ---------------------------------------------------- */
+/* COLLAPSE TOGGLE BUTTON */
+/* ---------------------------------------------------- */
+
+/* The position/style of the button itself is mostly set inline in React */
+.collapse-toggle-btn {
+    z-index: 1000;
+}

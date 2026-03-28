@@ -1,0 +1,14 @@
+# Ignore Visual Studio junk
+../.vs/
+.vs/
+*.suo
+*.vscode/
+*.vercel/
+
+# Ignore build output
+dist/
+node_modules/
+
+# Ignore environment files
+.env
+.env.local
