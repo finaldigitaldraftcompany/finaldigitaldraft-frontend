@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/Home.css"; // adjust if you place it elsewhere
+import "../styles/home.css"; // adjust if you place it elsewhere
 import heroImage from "../assets/hero-image.png"; // optional image
 
 export default function Home() {
