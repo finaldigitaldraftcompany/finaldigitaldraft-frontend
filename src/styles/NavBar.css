@@ -1,0 +1,101 @@
+/* === NAV BAR CONTAINER === */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+
+  /* A1 Frosted White Glass */
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  z-index: 999;
+}
+
+/* === LOGO === */
+.nav-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* === NAV LINKS === */
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  color: #1a1a1a;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.6;
+}
+
+/* === DROPDOWN WRAPPER === */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  color: #1a1a1a;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.dropdown-toggle:hover {
+  opacity: 0.6;
+}
+
+/* === DROPDOWN MENU === */
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  min-width: 220px;
+
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  padding: 16px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+/* === DROPDOWN LINKS === */
+.dropdown-item {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 6px 0;
+  transition: opacity 0.2s ease;
+}
+
+.dropdown-item:hover {
+  opacity: 0.6;
+}
