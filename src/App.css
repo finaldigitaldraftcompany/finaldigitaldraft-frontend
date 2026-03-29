@@ -4,3 +4,7 @@
 	padding: 0;
 }
 
+html, body, #root, .App {
+  background: #f7f7f7 !important;
+  color: #1a1a1a !important;
+}
