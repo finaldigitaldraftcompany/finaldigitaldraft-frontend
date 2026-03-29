@@ -20,11 +20,12 @@
   z-index: 999;
 }
 
-/* === LOGO === */
+/* === LOGO / BRAND TEXT === */
+.nav-title,
 .nav-logo {
   font-size: 22px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #f5f5f5; /* soft white */
 }
 
 /* === NAV LINKS === */
@@ -34,7 +35,7 @@
 }
 
 .nav-link {
-  color: #1a1a1a;
+  color: #f5f5f5; /* soft white */
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
@@ -51,7 +52,7 @@
 }
 
 .dropdown-toggle {
-  color: #1a1a1a;
+  color: #f5f5f5; /* soft white */
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
@@ -89,7 +90,7 @@
 
 /* === DROPDOWN LINKS === */
 .dropdown-item {
-  color: #1a1a1a;
+  color: #1a1a1a; /* keep dropdown text dark for readability on light glass */
   text-decoration: none;
   font-size: 15px;
   padding: 6px 0;
