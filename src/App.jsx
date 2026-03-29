@@ -3,25 +3,26 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 
-// ✅ All pages now correctly imported from /pages
+// Public Pages
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Pricing from "./pages/Pricing";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import AdminLogin from "./pages/AdminLogin";
 
-import EditNavigation from "./pages/EditNavigation";
+// NEW unified login system
+import Login from "./pages/Login";
 
 // Admin + Protected
 import ProtectedRoute from "./components/ProtectedRoute";
-import AdminDashboard from "./components/AdminDashboard";
+import AdminDashboard from "./pages/AdminDashboard";   // ✅ FIXED PATH
 import EditHome from "./components/EditHome";
 import EditServices from "./components/EditServices";
 import EditTheme from "./components/EditTheme";
+import EditNavigation from "./pages/EditNavigation";
 
-// Client Flow
+// Client Checkout Flow
 import Checkout from "./clientflow/Checkout";
 import Success from "./clientflow/Success";
 import Cancel from "./clientflow/Cancel";
@@ -44,8 +45,8 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
 
-          {/* Auth */}
-          <Route path="/login" element={<AdminLogin />} />
+          {/* Unified Login */}
+          <Route path="/login" element={<Login />} />
 
           {/* Checkout Flow */}
           <Route path="/checkout" element={<Checkout />} />
