@@ -51,3 +51,7 @@ button:hover {
   background-color: #f0f0f0;
   border-color: #b0b0b0;
 }
+html, body, #root, .App {
+  background: #f7f7f7 !important;
+  color: #1a1a1a !important;
+}
