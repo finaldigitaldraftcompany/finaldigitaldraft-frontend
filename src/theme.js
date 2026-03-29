@@ -2,18 +2,18 @@ export function getThemeSettings() {
     const saved = JSON.parse(localStorage.getItem("themeSettings"));
 
     return saved || {
-        // Core neon theme colors
-        primaryColor: "#00eaff",
-        backgroundColor: "#050510",
-        accentColor: "#ff00ff",
-        textColor: "#ffffff",
+        // Completely neutral colors
+        primaryColor: "transparent",
+        backgroundColor: "transparent",
+        accentColor: "inherit",
+        textColor: "inherit",
 
-        // Glow intensity
-        glowStrength: 15,
+        // No glow, no shadows
+        glowStrength: 0,
 
-        // Animation settings
-        animationsEnabled: true,
-        animationStyle: "fade",      // fade | slide-up | glow-pulse
-        animationSpeed: "normal"     // slow | normal | fast
+        // Disable animations by default
+        animationsEnabled: false,
+        animationStyle: "none",
+        animationSpeed: "normal"
     };
 }
