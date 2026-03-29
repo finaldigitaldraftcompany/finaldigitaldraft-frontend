@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "../styles/NavBar.css";
-import logo from "../assets/logo.png";
 
 export default function NavBar() {
     const navigate = useNavigate();
@@ -11,7 +10,6 @@ export default function NavBar() {
         <nav className="navbar">
             {/* Brand */}
             <div className="nav-brand" onClick={() => navigate("/")}>
-                <img src={logo} alt="Final Digital Draft Logo" className="nav-logo" />
                 <span className="nav-title">Final Digital Draft</span>
             </div>
 
