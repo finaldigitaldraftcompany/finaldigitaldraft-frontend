@@ -1,0 +1,24 @@
+/* Services.css */
+.services-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 8%;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    box-sizing: border-box;
+}
+
+.header {
+    font-size: 42px;
+    font-weight: 800;
+    color: #3b82f6;
+    margin-bottom: 12px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: 12px;
+    padding: 35px;
+}
+/* ... add your other classes here ... */
